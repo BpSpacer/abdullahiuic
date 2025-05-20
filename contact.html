@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us</title>
+
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.2/dist/sweetalert2.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header and Footer same color */
+        header,
+        footer {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        header {
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .contact-form button {
+            padding: 12px;
+            font-size: 1.1em;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        .info-item {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .info-label {
+            font-weight: bold;
+        }
+
+        .contact-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h4 mb-0">My Portfolio</h1>
+            <nav>
+                <a href="index.html" class="text-white me-3 text-decoration-none">Home</a>
+                <a href="hobbies.html" class="text-white me-3 text-decoration-none">My Hobbies</a>
+                <a href="media.html" class="text-white me-3 text-decoration-none">My Favorite Media</a>
+                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-4 mb-4 d-flex justify-content-center">
+        <div class="contact-card mt-5">
+            <h1 class="text-center mb-4">Contact Us</h1>
+            <div class="info-item"><span class="info-label">👤 Name:</span> Sarah Khan</div>
+            <div class="info-item"><span class="info-label">💼 Designation:</span> Marketing Director</div>
+            <div class="info-item"><span class="info-label">📧 Email:</span> <a href="mailto:sarah.khan@example.com">sarah.khan@example.com</a></div>
+            <div class="info-item"><span class="info-label">📱 Contact Number:</span> <a href="tel:+923214567890">+92 321 4567890</a></div>
+            <div class="info-item">
+                <span class="info-label">📍 Office Location:</span>
+                <a href="https://www.google.com/maps?q=24.8607,67.0011" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+                <br />
+                <small>12th Floor, Tower A, Clifton Center, Karachi, Pakistan</small>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025. All rights reserved.</p>
+    </footer>
+
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.2/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm')?.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Simulate a successful form submission
+            Swal.fire({
+                title: 'Thank you for contacting us!',
+                text: 'Your message has been sent successfully.',
+                icon: 'success',
+                confirmButtonText: 'Okay',
+            });
+
+            // Optionally, reset the form after successful submission
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
